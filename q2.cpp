@@ -15,8 +15,10 @@ public:
     //
     int assignment(int assignmentCount, int totalPerAssignment, float assignmentWeight)
     {
-        float marks = (assignmentCount * totalPerAssignment)
+        float marks = (assignmentCount * totalPerAssignment);
+        float assignmentTotals = marks * assignmentWeight;
+        return assignmentTotals;
     }
     //function to set final mark
-    int setFinalMark(yearMark, assignmentMark) {return (assignmentMark + yearMark); }
-}
+    int setFinalMark(float yearMark, float assignmentMark) {return (assignmentMark + yearMark); }
+};
