@@ -21,4 +21,15 @@ public:
     }
     //function to set final mark
     int setFinalMark(float yearMark, float assignmentMark) {return (assignmentMark + yearMark); }
+
+    //Go Getters
+    string getName() { return moduleName; }
+    string getCode() { return moduleCode; }
 };
+
+int main()
+{
+    Module module;
+    module.setName("COS1512\n");
+    return 0;
+}
