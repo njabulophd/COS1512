@@ -1,35 +1,41 @@
 #include <iostream>
 using namespace std;
+
+
 class module
 {
 private:
-    //Strings that store  module name and module code
     string moduleName;
     string moduleCode;
-    float yearMark, assignmentMark;
-    int finalMark;
-public:
-    //Functions used to set module name and code
-    string setName(string moduleName) { return moduleName; }
-    string setCode(string moduleCode) { return moduleCode; }
-    //
-    int assignment(int assignmentCount, int totalPerAssignment, float assignmentWeight)
+
+    class assignment
     {
-        float marks = (assignmentCount * totalPerAssignment);
-        float assignmentTotals = marks * assignmentWeight;
-        return assignmentTotals;
+        private:
+        string assignmentName;
+        float assignmentMark;
+        float assignmentWeight;
+        public:
+        void setAssignment(string name, int mark, float weight) 
+        {
+            assignmentName = name;
+            assignmentMark = mark;
+            assignmentWeight = weight
+            assignmentMark *= assignmentWeight;
+        }
+        
+        int getAssessmentMark(float assessmentMark) { assessmentMark = assignmentMark; return assessmentMark; }
+
     }
-    //function to set final mark
-    int setFinalMark(float yearMark, float assignmentMark) {return (assignmentMark + yearMark); }
 
-    //Go Getters
-    string getName() { return moduleName; }
-    string getCode() { return moduleCode; }
-};
+public:
+    //Setters
+    setModuleName(string name) { moduleName = name; return moduleName; }
+    setModuleCode(string code) { moduleCode = code; return moduleCode; }
 
-int main()
-{
-    Module module;
-    module.setName("COS1512\n");
-    return 0;
+    //Getter
+    getModuleName() { return moduleName; }
+    getModuleCode() { return moduleCode; }
+
+
+
 }
