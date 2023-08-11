@@ -4,7 +4,17 @@ using namespace std;
 
 class module
 {
-private:
+
+public:
+    //Setters
+    string setModuleName(string name) { moduleName = name; return moduleName; }
+    string setModuleCode(string code) { moduleCode = code; return moduleCode; }
+
+    //Getter
+    string getModuleName() { return moduleName; }
+    string getModuleCode() { return moduleCode; }
+
+public:
     string moduleName;
     string moduleCode;
 
@@ -19,23 +29,23 @@ private:
         {
             assignmentName = name;
             assignmentMark = mark;
-            assignmentWeight = weight
+            assignmentWeight = weight;
             assignmentMark *= assignmentWeight;
         }
         
         int getAssessmentMark(float assessmentMark) { assessmentMark = assignmentMark; return assessmentMark; }
 
-    }
+    };
+};
 
-public:
-    //Setters
-    setModuleName(string name) { moduleName = name; return moduleName; }
-    setModuleCode(string code) { moduleCode = code; return moduleCode; }
-
-    //Getter
-    getModuleName() { return moduleName; }
-    getModuleCode() { return moduleCode; }
-
-
-
+int main()
+{
+    module Module;
+    Module.setModuleName("Introduction to programming I");
+    Module.setModuleCode("COS1512");
+    module::assignment Assignment;
+    Assignment.setAssignment("COS1512", 125, 0.40);
+    cout << Module.getModuleCode() << endl;
+    cout << Module.getModuleName() << endl;
+    return 0;
 }
