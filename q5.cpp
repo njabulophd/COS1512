@@ -38,5 +38,7 @@ private:
 
 int main()
 {
-    return 0;
+	Date nowDate;
+	std::cout << nowDate << std::endl;
+	return 0;
 }
