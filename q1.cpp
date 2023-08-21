@@ -4,9 +4,11 @@ using namespace std;
 //Employee raise function
 float raise(float salary)
 {
+	//raises salary by a whopping 10%
 	salary *= 1.10;
 	return salary;
 }
+//Overloaded raise function. with default salary raise value for Joanne Soap
 float raise()
 {
 	float getterG = 100.129;
@@ -76,13 +78,14 @@ public:
 int main()
 {
 	worker defaultEmployee;
-	
+	cout.setf(ios::fixed);
+	cout.precision(2);
 	float rayse = defaultEmployee.Default();
-	cout << "get salary raise: " << rayse << "\n";
-	cout << rayse << "\n" << raise(rayse)<< "\n";
+	cout << "get salary raise from:\t" << rayse << "\n";
+	cout << "To a 10% salary increase:\t" << raise(rayse)<< "\n";
 	worker Employee;
 	float userSalary = Employee.user();
-	cout << "User salary raise: " << raise(userSalary) << "\n";
+	cout << "A 10% user salary raise from: " << userSalary << " to " << raise(userSalary) << "\n";
 	
 	cin.get();
 
