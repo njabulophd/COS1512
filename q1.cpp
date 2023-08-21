@@ -14,7 +14,7 @@ float raise()
 	float getterG = 100.129;
 	return 0.0;
 }
-//Some Class
+//Some Worker/Employee Class to take-in and store employee data.
 class worker
 {
 private:
@@ -41,7 +41,7 @@ public:
 	string getSurname() { return surName; }
 	float getSalary() { return salary; }
 
-	//default function for data
+	//default employee function that constructs a default employee object for data
 	static float Default()
 	{
 		worker employee1;
