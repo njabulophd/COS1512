@@ -34,16 +34,17 @@ public:
         }
         
         int getAssessmentMark(float assessmentMark) { assessmentMark = assignmentMark; return assessmentMark; }
+        float getAssignmentWeight() { return assignmentWeight; }
 
     };
 };
 
 int main()
 {
-    module Module;
-    Module.setModuleName("Introduction to programming I");
-    Module.setModuleCode("COS1512");
-    module::assignment Assignment;
+    module Modules;
+    Modules.setModuleName("Introduction to programming II");
+    Modules.setModuleCode("COS1512");
+    Modules::assignment Assignment;
     Assignment.setAssignment("COS1512", 125, 0.40);
     cout << Module.getModuleCode() << endl;
     cout << Module.getModuleName() << endl;
